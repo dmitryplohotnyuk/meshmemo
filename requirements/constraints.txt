@@ -21,7 +21,7 @@ opentelemetry-api==1.45.0
 packaging==26.3
 protobuf==7.36.2
 pydantic==2.13.5
-pydantic_core==2.46.5
+pydantic_core==2.49.0
 Pypubsub==4.0.7
 pyserial==3.5
 PyYAML==6.0.3
