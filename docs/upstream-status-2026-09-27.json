@@ -1,0 +1,59 @@
+{
+  "checked_at": "2026-09-27T08:18:58.868539+00:00",
+  "issue_url": "https://github.com/meshtastic/Meshtastic-Apple/issues/2543",
+  "issue_state": "closed",
+  "issue_state_reason": "completed",
+  "issue_comments": 0,
+  "pr": {
+    "html_url": "https://github.com/meshtastic/Meshtastic-Apple/pull/2549",
+    "state": "closed",
+    "merged": true,
+    "merged_at": "2026-09-27T01:13:50Z",
+    "merge_commit_sha": "3c347cd57b4ce2286a5b430dec219792bc6c7497"
+  },
+  "files": [
+    {
+      "filename": "Meshtastic/Helpers/MeshPackets.swift"
+    },
+    {
+      "filename": "MeshtasticTests/MeshPacketsAndTelemetryTests.swift"
+    }
+  ],
+  "releases": [
+    {
+      "tag_name": "v2.7.21",
+      "published_at": "2026-09-01T17:12:39Z",
+      "html_url": "https://github.com/meshtastic/Meshtastic-Apple/releases/tag/v2.7.21",
+      "prerelease": false
+    },
+    {
+      "tag_name": "v2.7.20",
+      "published_at": "2026-08-31T05:04:39Z",
+      "html_url": "https://github.com/meshtastic/Meshtastic-Apple/releases/tag/v2.7.20",
+      "prerelease": false
+    },
+    {
+      "tag_name": "v2.7.19",
+      "published_at": "2026-08-29T17:44:24Z",
+      "html_url": "https://github.com/meshtastic/Meshtastic-Apple/releases/tag/v2.7.19",
+      "prerelease": false
+    }
+  ],
+  "app_store": {
+    "store_ua": [
+      {
+        "version": "2.7.22",
+        "currentVersionReleaseDate": "2026-09-11T00:58:27Z",
+        "trackViewUrl": "https://apps.apple.com/ua/app/meshtastic/id1586432531?uo=4"
+      }
+    ],
+    "store_us": [
+      {
+        "version": "2.7.22",
+        "currentVersionReleaseDate": "2026-09-11T00:58:27Z",
+        "trackViewUrl": "https://apps.apple.com/us/app/meshtastic/id1586432531?uo=4"
+      }
+    ]
+  },
+  "validation": "Source diff inspected; upstream reports regression tests passing. No new local iOS or radio test performed."
+}

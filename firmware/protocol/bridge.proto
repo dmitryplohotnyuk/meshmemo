@@ -1,0 +1,6 @@
+syntax = "proto3";
+package meshtastic_sf;
+
+// Wire-compatible projections of the fork's local-only API extension.
+message ToRadioBridge { bytes usb_sf = 100; }
+message FromRadioBridge { bytes usb_sf = 100; }

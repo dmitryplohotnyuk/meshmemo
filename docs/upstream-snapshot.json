@@ -1,0 +1,273 @@
+{
+  "schema_version": 1,
+  "checked_on": "2026-09-25",
+  "method": "Static source review. No hardware tests or binary validation. Independent source snapshots, not a tested dependency lockfile.",
+  "sources": [
+    {
+      "repository": "https://github.com/meshtastic/firmware",
+      "ref": "develop",
+      "commit": "f90b48ea6cda35b5f6fdd4cd659498d28d8bd153",
+      "commit_date": "2026-09-24T22:41:37Z",
+      "files": [
+        {
+          "path": "src/modules/StoreForwardModule.cpp",
+          "url": "https://github.com/meshtastic/firmware/blob/f90b48ea6cda35b5f6fdd4cd659498d28d8bd153/src/modules/StoreForwardModule.cpp",
+          "sha256": "8e3eda129b8034dea0fd59f089c01d40f8aed82b96b340f74a62e72564f91ac4",
+          "bytes": 27729
+        },
+        {
+          "path": "src/modules/StoreForwardModule.h",
+          "url": "https://github.com/meshtastic/firmware/blob/f90b48ea6cda35b5f6fdd4cd659498d28d8bd153/src/modules/StoreForwardModule.h",
+          "sha256": "03e78efb7cb945d1504310de6bf1c7bcbe41fbdb59fcf33de08cf92d75f14755",
+          "bytes": 4370
+        },
+        {
+          "path": "src/mesh/MeshService.cpp",
+          "url": "https://github.com/meshtastic/firmware/blob/f90b48ea6cda35b5f6fdd4cd659498d28d8bd153/src/mesh/MeshService.cpp",
+          "sha256": "5b780151aabf56b5f730124b48bebde6465ef4566f6d8e76c4cf26d51c2eff08",
+          "bytes": 27610
+        },
+        {
+          "path": "src/mesh/PhoneAPI.cpp",
+          "url": "https://github.com/meshtastic/firmware/blob/f90b48ea6cda35b5f6fdd4cd659498d28d8bd153/src/mesh/PhoneAPI.cpp",
+          "sha256": "eea2ab24b60cb08bf1683e256eac47e8cf906c3bccc6f29eb31649a632dc425f",
+          "bytes": 101174
+        },
+        {
+          "path": "src/mesh/Router.cpp",
+          "url": "https://github.com/meshtastic/firmware/blob/f90b48ea6cda35b5f6fdd4cd659498d28d8bd153/src/mesh/Router.cpp",
+          "sha256": "e92755aeb1e7e98423bfae702b7697bde0cf509a3426b5cc1fe00f2ab1060ccd",
+          "bytes": 81531
+        },
+        {
+          "path": "src/mesh/RadioInterface.cpp",
+          "url": "https://github.com/meshtastic/firmware/blob/f90b48ea6cda35b5f6fdd4cd659498d28d8bd153/src/mesh/RadioInterface.cpp",
+          "sha256": "0de8434b14c3c1deb383b4510b96a9d0d750a797e9140f9cfb08147e4a749506",
+          "bytes": 69701
+        },
+        {
+          "path": "src/mesh/PacketHistory.cpp",
+          "url": "https://github.com/meshtastic/firmware/blob/f90b48ea6cda35b5f6fdd4cd659498d28d8bd153/src/mesh/PacketHistory.cpp",
+          "sha256": "e9c8bf0ff55db7ab380e54c4777a388a91306cdbc051722442420395a9e0d503",
+          "bytes": 25736
+        },
+        {
+          "path": "src/mesh/FloodingRouter.cpp",
+          "url": "https://github.com/meshtastic/firmware/blob/f90b48ea6cda35b5f6fdd4cd659498d28d8bd153/src/mesh/FloodingRouter.cpp",
+          "sha256": "58fb0688f2f449c80ceff29d6e1f2b74fa531c855ee1c6c5a39f41d11d972e9e",
+          "bytes": 7194
+        },
+        {
+          "path": "src/mesh/Channels.cpp",
+          "url": "https://github.com/meshtastic/firmware/blob/f90b48ea6cda35b5f6fdd4cd659498d28d8bd153/src/mesh/Channels.cpp",
+          "sha256": "beccffcbb50e42c5075697d5522303a75357dfa7d64b80197c301b313df881f0",
+          "bytes": 23750
+        }
+      ]
+    },
+    {
+      "repository": "https://github.com/meshtastic/firmware",
+      "ref": "v2.7.26.54e0d8d",
+      "commit": "54e0d8d0ab2ff56b3a9ce967e53f79e49af560fb",
+      "commit_date": "2026-06-23T16:26:52Z",
+      "files": [
+        {
+          "path": "src/modules/StoreForwardModule.cpp",
+          "url": "https://github.com/meshtastic/firmware/blob/54e0d8d0ab2ff56b3a9ce967e53f79e49af560fb/src/modules/StoreForwardModule.cpp",
+          "sha256": "e554816e465505152c531b62190df511887fac07c31f21a87d49adc8437b161f",
+          "bytes": 26784
+        },
+        {
+          "path": "src/modules/StoreForwardModule.h",
+          "url": "https://github.com/meshtastic/firmware/blob/54e0d8d0ab2ff56b3a9ce967e53f79e49af560fb/src/modules/StoreForwardModule.h",
+          "sha256": "0f5aec426a6d0a1b1a6d5960a6409d09e25ce1c94199b315a283f45e06bfd04d",
+          "bytes": 4147
+        },
+        {
+          "path": "src/mesh/MeshService.cpp",
+          "url": "https://github.com/meshtastic/firmware/blob/54e0d8d0ab2ff56b3a9ce967e53f79e49af560fb/src/mesh/MeshService.cpp",
+          "sha256": "76cf4266b9b3f4fb7f7629eb2e9a9ec8e5016f3e10241794e1e30da25aed39e9",
+          "bytes": 17336
+        },
+        {
+          "path": "src/mesh/PhoneAPI.h",
+          "url": "https://github.com/meshtastic/firmware/blob/54e0d8d0ab2ff56b3a9ce967e53f79e49af560fb/src/mesh/PhoneAPI.h",
+          "sha256": "b94d747a3e88898cf0bcd02117978c03b01f4353698535edf113edafac6d78fa",
+          "bytes": 7345
+        },
+        {
+          "path": "src/mesh/PhoneAPI.cpp",
+          "url": "https://github.com/meshtastic/firmware/blob/54e0d8d0ab2ff56b3a9ce967e53f79e49af560fb/src/mesh/PhoneAPI.cpp",
+          "sha256": "a6b618405432cd04e9fedbbf3f93069d2f44648079834cf5b6114fc11d79dcef",
+          "bytes": 37300
+        },
+        {
+          "path": "src/SerialConsole.h",
+          "url": "https://github.com/meshtastic/firmware/blob/54e0d8d0ab2ff56b3a9ce967e53f79e49af560fb/src/SerialConsole.h",
+          "sha256": "d632d500e8acefb7485d528a75b79af6eb2fce9cf8b13d3cdf9ac8e3d8813bd3",
+          "bytes": 1667
+        },
+        {
+          "path": "src/SerialConsole.cpp",
+          "url": "https://github.com/meshtastic/firmware/blob/54e0d8d0ab2ff56b3a9ce967e53f79e49af560fb/src/SerialConsole.cpp",
+          "sha256": "84bd8fd49b5a7039313cf716221d8603af39140215c593ac43a5b52bb2e40632",
+          "bytes": 4295
+        },
+        {
+          "path": "variants/esp32s3/tbeam-s3-core/platformio.ini",
+          "url": "https://github.com/meshtastic/firmware/blob/54e0d8d0ab2ff56b3a9ce967e53f79e49af560fb/variants/esp32s3/tbeam-s3-core/platformio.ini",
+          "sha256": "9e77860123eb5e0a8e062725371e6b822e63b0919a7bb5e223c73b74d101206b",
+          "bytes": 841
+        },
+        {
+          "path": "variants/esp32s3/tbeam-s3-core/variant.h",
+          "url": "https://github.com/meshtastic/firmware/blob/54e0d8d0ab2ff56b3a9ce967e53f79e49af560fb/variants/esp32s3/tbeam-s3-core/variant.h",
+          "sha256": "d270b6fb4306b96ddaa01eb8e5c968df121642ba0307849aee2d64ad34afd504",
+          "bytes": 2415
+        }
+      ],
+      "release_url": "https://github.com/meshtastic/firmware/releases/tag/v2.7.26.54e0d8d",
+      "release_published_at": "2026-06-24T11:19:27Z"
+    },
+    {
+      "repository": "https://github.com/meshtastic/protobufs",
+      "ref": "master",
+      "commit": "51028ca5a6945c76d3977c2bb803f9947d319ac5",
+      "commit_date": "2026-09-22T00:34:23Z",
+      "files": [
+        {
+          "path": "meshtastic/storeforward.proto",
+          "url": "https://github.com/meshtastic/protobufs/blob/51028ca5a6945c76d3977c2bb803f9947d319ac5/meshtastic/storeforward.proto",
+          "sha256": "6d050a20ffa6aa9eceafc6f0335d7ead4aeeed2861a831234bc23b29cd35ca15",
+          "bytes": 4212
+        },
+        {
+          "path": "meshtastic/mesh.proto",
+          "url": "https://github.com/meshtastic/protobufs/blob/51028ca5a6945c76d3977c2bb803f9947d319ac5/meshtastic/mesh.proto",
+          "sha256": "bfbca5d06595c9d81f3236aa7653ef9ad968353a74a2cc1a8ff86f59765503e7",
+          "bytes": 81119
+        },
+        {
+          "path": "meshtastic/portnums.proto",
+          "url": "https://github.com/meshtastic/protobufs/blob/51028ca5a6945c76d3977c2bb803f9947d319ac5/meshtastic/portnums.proto",
+          "sha256": "0e765c6ae283ba866047c0579d3820e28b60b56187cc9f55c4d78bd15440440a",
+          "bytes": 9494
+        }
+      ]
+    },
+    {
+      "repository": "https://github.com/meshtastic/python",
+      "ref": "master",
+      "commit": "be366660828b5a54469e703209a10aa954927791",
+      "commit_date": "2026-09-14T19:48:19Z",
+      "files": [
+        {
+          "path": "meshtastic/mesh_interface.py",
+          "url": "https://github.com/meshtastic/python/blob/be366660828b5a54469e703209a10aa954927791/meshtastic/mesh_interface.py",
+          "sha256": "8efd6483d8cc1c6a1acb1a6a75efb132a0a1e08a283fb523e83790270c60cc8e",
+          "bytes": 70040
+        },
+        {
+          "path": "meshtastic/serial_interface.py",
+          "url": "https://github.com/meshtastic/python/blob/be366660828b5a54469e703209a10aa954927791/meshtastic/serial_interface.py",
+          "sha256": "a9baaa5b4702791ee578ead97c239c500de48d08432965e2329b0f4cebe6771c",
+          "bytes": 3906
+        }
+      ]
+    },
+    {
+      "repository": "https://github.com/meshtastic/python",
+      "ref": "2.7.11",
+      "commit": "19d066970e652a5a72a18718149b638e3473a6eb",
+      "commit_date": "2026-07-17T17:37:04Z",
+      "files": [
+        {
+          "path": "meshtastic/mesh_interface.py",
+          "url": "https://github.com/meshtastic/python/blob/19d066970e652a5a72a18718149b638e3473a6eb/meshtastic/mesh_interface.py",
+          "sha256": "8efd6483d8cc1c6a1acb1a6a75efb132a0a1e08a283fb523e83790270c60cc8e",
+          "bytes": 70040
+        }
+      ],
+      "release_url": "https://github.com/meshtastic/python/releases/tag/2.7.11",
+      "release_published_at": "2026-07-17T17:39:05Z"
+    },
+    {
+      "repository": "https://github.com/meshtastic/Meshtastic-Apple",
+      "ref": "main",
+      "commit": "6f3ee55bc7c9ff9b2d6f0c64b23de05ddeeaae21",
+      "commit_date": "2026-09-22T15:42:19Z",
+      "files": [
+        {
+          "path": "Meshtastic/Accessory/Accessory Manager/AccessoryManager+FromRadio.swift",
+          "url": "https://github.com/meshtastic/Meshtastic-Apple/blob/6f3ee55bc7c9ff9b2d6f0c64b23de05ddeeaae21/Meshtastic/Accessory/Accessory%20Manager/AccessoryManager%2BFromRadio.swift",
+          "sha256": "ec5657ee313751ac0af0862e7aa15817a62d7c0185e8564dd8dea4a8dac33ffa",
+          "bytes": 42141
+        },
+        {
+          "path": "Meshtastic/Accessory/Accessory Manager/AccessoryManager+ToRadio.swift",
+          "url": "https://github.com/meshtastic/Meshtastic-Apple/blob/6f3ee55bc7c9ff9b2d6f0c64b23de05ddeeaae21/Meshtastic/Accessory/Accessory%20Manager/AccessoryManager%2BToRadio.swift",
+          "sha256": "2c1978874bcbc9992cb68b36fc9e5dc5134b5d628617ad679621f80739f2e6e6",
+          "bytes": 133058
+        },
+        {
+          "path": "Meshtastic/Helpers/MeshPackets.swift",
+          "url": "https://github.com/meshtastic/Meshtastic-Apple/blob/6f3ee55bc7c9ff9b2d6f0c64b23de05ddeeaae21/Meshtastic/Helpers/MeshPackets.swift",
+          "sha256": "4ee4e3bd1fed00b45f634a35809787de75f709ece0df4270634d9644cd1e1da1",
+          "bytes": 118287
+        }
+      ]
+    },
+    {
+      "repository": "https://github.com/meshtastic/Meshtastic-Apple",
+      "ref": "v2.7.21",
+      "commit": "4ea817379c4d70075c3c5b8cc0cecee7938a23bd",
+      "commit_date": "2026-09-01T04:30:13Z",
+      "files": [
+        {
+          "path": "Meshtastic/Accessory/Accessory Manager/AccessoryManager+FromRadio.swift",
+          "url": "https://github.com/meshtastic/Meshtastic-Apple/blob/4ea817379c4d70075c3c5b8cc0cecee7938a23bd/Meshtastic/Accessory/Accessory%20Manager/AccessoryManager%2BFromRadio.swift",
+          "sha256": "89d295963c998fca8cd7d7484fb23aae0c1fe9701663e257eb152e5f11284095",
+          "bytes": 37759
+        },
+        {
+          "path": "Meshtastic/Helpers/MeshPackets.swift",
+          "url": "https://github.com/meshtastic/Meshtastic-Apple/blob/4ea817379c4d70075c3c5b8cc0cecee7938a23bd/Meshtastic/Helpers/MeshPackets.swift",
+          "sha256": "d73ba1e5901897f86885d30ea254e6a1f8a4608f17b815eba32b2d8020510b2d",
+          "bytes": 110873
+        }
+      ],
+      "release_url": "https://github.com/meshtastic/Meshtastic-Apple/releases/tag/v2.7.21",
+      "release_published_at": "2026-09-01T17:12:39Z"
+    },
+    {
+      "repository": "https://github.com/meshtastic/Meshtastic-Android",
+      "ref": "main",
+      "commit": "ecf0b1283b8dd21200d3083c930537fd52c92709",
+      "commit_date": "2026-09-25T00:42:52Z",
+      "files": [
+        {
+          "path": "core/data/src/commonMain/kotlin/org/meshtastic/core/data/manager/StoreForwardPacketHandlerImpl.kt",
+          "url": "https://github.com/meshtastic/Meshtastic-Android/blob/ecf0b1283b8dd21200d3083c930537fd52c92709/core/data/src/commonMain/kotlin/org/meshtastic/core/data/manager/StoreForwardPacketHandlerImpl.kt",
+          "sha256": "c18a8bf8366f0d341d5b90d6e5273f69bbf7dd866fd4d12f98e22c84765776fa",
+          "bytes": 9302
+        }
+      ]
+    },
+    {
+      "repository": "https://github.com/meshtastic/Meshtastic-Android",
+      "ref": "v2.8.1",
+      "commit": "7c6a6cc195a2248cd50ed7f2395451cabcd93fdc",
+      "commit_date": "2026-08-20T01:37:50Z",
+      "files": [
+        {
+          "path": "core/data/src/commonMain/kotlin/org/meshtastic/core/data/manager/StoreForwardPacketHandlerImpl.kt",
+          "url": "https://github.com/meshtastic/Meshtastic-Android/blob/7c6a6cc195a2248cd50ed7f2395451cabcd93fdc/core/data/src/commonMain/kotlin/org/meshtastic/core/data/manager/StoreForwardPacketHandlerImpl.kt",
+          "sha256": "c55b718216dcc80dfa530f47230c6c2e923a8e6400bb45f166b726cc28314523",
+          "bytes": 8717
+        }
+      ],
+      "release_url": "https://github.com/meshtastic/Meshtastic-Android/releases/tag/v2.8.1",
+      "release_published_at": "2026-08-20T13:13:39Z"
+    }
+  ]
+}

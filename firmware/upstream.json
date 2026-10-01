@@ -1,0 +1,161 @@
+{
+  "schema_version": 1,
+  "reviewed_on": "2026-09-25",
+  "upstream": {
+    "repository": "https://github.com/meshtastic/firmware",
+    "tag": "v2.7.26.54e0d8d",
+    "commit": "54e0d8d0ab2ff56b3a9ce967e53f79e49af560fb",
+    "protobufs_commit": "6b1ded439633cd03d4af85b44231b91d1d106278"
+  },
+  "target": "tbeam-s3-core",
+  "inherited_patch": {
+    "path": "patches/0001-inherited-ua22-cyrillic-windows.patch",
+    "source_artifact": "release-tbeam-s3-core-UA22-Cyrillic/UA433-22dBm-Cyrillic.patch",
+    "sha256": "f72d906e12483abd8686620e9e4e15ac433d977a3db9bbffb0d48cc90a5fdb7a",
+    "clean_base_apply_check": "PASS",
+    "reconstructed_files_match_existing_checkout_after_newline_normalization": true,
+    "files": [
+      {
+        "path": "platformio.ini",
+        "source_file_sha256": "408018cee91a811e4fcf333813f079d7e5aa83ef5a9171b69e8e872066515131"
+      },
+      {
+        "path": "src/graphics/Screen.h",
+        "source_file_sha256": "3d1ca14ed182813c1bc55c8d07c7fd083671542caea3b5daae929390f7108de3"
+      },
+      {
+        "path": "src/mesh/RadioInterface.cpp",
+        "source_file_sha256": "dee5ad2fd74c021ebab05debc0a32a3c9ed7e89b1b10fb919da4ecb48c8de6b8"
+      },
+      {
+        "path": "variants/esp32s3/tbeam-s3-core/platformio.ini",
+        "source_file_sha256": "969aa895ec1f52335f26c8099fad3ca6e47df83aa7d574f1b369314db4a7d6d8"
+      },
+      {
+        "path": "windows-build.ini",
+        "source_file_sha256": "f22f72d14eebba3bc924cd596948dd997da538048391c279c48ec6810dc25963"
+      },
+      {
+        "path": "extra_scripts/windows_lto.py",
+        "source_file_sha256": "05c907d8f24f77c59b72385bd7378f015362d3c0aa76b8ca8306e15e3b745df4"
+      }
+    ]
+  },
+  "prior_application": {
+    "filename": "firmware-tbeam-s3-core-UA433-22dBm-Cyrillic-2.7.26.54e0d8d.bin",
+    "sha256": "f93f8e5e766354035400a61d40f41b9ca0aacc5c2e0e7b969f418565df278114",
+    "size_bytes": 2408576,
+    "all_seven_release_checksums_verified": true
+  },
+  "historical_device_layout": {
+    "live_rechecked": false,
+    "app_offset": "0x10000",
+    "app_partition_size_bytes": 2424832,
+    "littlefs_offset": "0x300000",
+    "littlefs_size_bytes": 1048576,
+    "remaining_bytes_after_prior_application": 16256
+  },
+  "usb_sf_patch_status": "profile_1_revision_2_implemented_radio_acceptance_pending",
+  "device_flashed_during_review": false,
+  "usb_diagnostics": {
+    "profile": 0,
+    "patch_revision": 1,
+    "replay_enabled": false,
+    "protobuf_field": 100,
+    "patches": [
+      {
+        "path": "protocol/0001-usb-sf-field.patch",
+        "sha256": "4fa37dded21558e61ead946a57c546e22ab72cc27f24ebf3a8472bef0059a402"
+      },
+      {
+        "path": "patches/0002-usb-diagnostics.patch",
+        "sha256": "a39d12237b8a347cbe3973f23215d916e574f6fcff5e601c1910039dfded2be2"
+      }
+    ],
+    "clean_base_reconstruction": "PASS; 15 changed/new files match after newline normalization",
+    "font_fallback_authorized": true,
+    "font_fallback_scope": "OLED Cyrillic only; preserve UTF-8 data",
+    "hardware_acceptance": "NOT RUN",
+    "security_gate": "docs/replay-security.md"
+  },
+  "updated_on": "2026-09-30",
+  "usb_replay": {
+    "profile": 1,
+    "patch_revision": 2,
+    "replay_enabled_by_default": false,
+    "patches": [
+      {
+        "path": "patches/0003-usb-replay.patch",
+        "sha256": "5981aaaacbf1eb1faf801e1f7720fbab55c4c0e13f0556751590286c79f13497"
+      },
+      {
+        "path": "patches/0004-usb-poll.patch",
+        "sha256": "048cc26186afae851f73a1f4d732d1ad0a704627589ea9629cdeabb358c008b7"
+      }
+    ],
+    "app_only_update_date": "2026-09-30",
+    "application_sha256": "ef8215ecf986713763895224f079072745303cdf81abce65be7e378e0654c461",
+    "application_size_bytes": 2410288,
+    "app_partition_size_bytes": 2424832,
+    "remaining_partition_bytes": 14544,
+    "configuration_preserved": true,
+    "usb_hello": "PASS",
+    "radio_acceptance": "NOT RUN",
+    "font_fallback_used": false
+  },
+  "historical_fields_note": "reviewed_on, prior_application, historical_device_layout, device_flashed_during_review and usb_diagnostics describe the initial diagnostic review; usb_replay records the later update.",
+  "usb_screen_timeout_candidate": {
+    "built_on": "2026-09-30",
+    "path": "patches/0005-usb-screen-timeout.patch",
+    "sha256": "799e3a14b2a07950fd47670f048aba475446cd222187d46b3d4c53121e0d560c",
+    "target": "tbeam-s3-core",
+    "application_filename": "meshmemo-tbeam-s3-core-usb-screen-timeout-2.7.26.bin",
+    "application_sha256": "be7dc0bb69b8c12e580bbd61c04672f6e43bad7e6452abf0061394b38fe38f3e",
+    "application_size_bytes": 2410576,
+    "app_partition_size_bytes": 2424832,
+    "remaining_partition_bytes": 14256,
+    "app_offset": "0x10000",
+    "live_partition_recheck_required_before_flash": false,
+    "profile": 1,
+    "patch_revision": 2,
+    "clean_patch_sequence_and_source_match": "PASS",
+    "host_fsm_oled_and_eink": "PASS",
+    "hardware_acceptance": "PASS for screen fix: operator confirmed operation; USB HELLO passed through 92 seconds, then operator unplugged device. Radio after this flash not retested.",
+    "flashed": true,
+    "font_fallback_used": false,
+    "app_only_update_date": "2026-09-30",
+    "live_partition_recheck": "PASS",
+    "flash_write_hash_verified": true,
+    "configuration_preserved": true,
+    "usb_hello": "PASS",
+    "usb_hello_passed_through_seconds": 92,
+    "physical_screen_observation": "operator confirmed",
+    "disconnect_cause": "operator unplugged device"
+  },
+  "server_channels_candidate": {
+    "built_on": "2026-09-30",
+    "profile": 1,
+    "patch_revision": 3,
+    "target": "tbeam-s3-core",
+    "path": "patches/0006-server-channels.patch",
+    "sha256": "3ed71d6f036e35019ebeaa3005c5809a1ebf67c99a027c4abcaecb80f87b285a",
+    "application_filename": "meshmemo-tbeam-s3-core-server-channels-2.7.26.bin",
+    "application_sha256": "c0c14da1fe405f1f50e009a3f48148cc3eb1ef0413fad279368ebcfc87de5804",
+    "application_size_bytes": 2411072,
+    "app_partition_size_bytes": 2424832,
+    "remaining_partition_bytes": 13760,
+    "app_offset": "0x10000",
+    "clean_patch_sequence_and_source_match": "PASS",
+    "flashed": true,
+    "hardware_acceptance": "USB/configuration PASS; server-channel radio reception/replay and administrator DM tests NOT RUN",
+    "live_partition_recheck_required_before_flash": false,
+    "screen_timeout_fix_included": true,
+    "font_fallback_used": false,
+    "app_only_update_date": "2026-09-30",
+    "live_partition_recheck": "PASS",
+    "flash_write_hash_verified": true,
+    "configuration_preserved": true,
+    "usb_hello": "PASS",
+    "usb_keepalive_test_seconds": 76
+  }
+}

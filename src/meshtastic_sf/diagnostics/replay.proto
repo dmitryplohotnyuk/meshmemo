@@ -1,0 +1,9 @@
+syntax = "proto3";
+package meshtastic_sf.diagnostics;
+
+// Wire projection of StoreAndForward text fields at protobuf commit 51028ca.
+message ReplayText {
+  uint32 rr = 1;
+  bytes text = 5;
+  uint32 original_id = 6;
+}

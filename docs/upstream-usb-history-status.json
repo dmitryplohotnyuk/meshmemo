@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "posted_on": "2026-09-30",
+  "url": "https://github.com/meshtastic/firmware/discussions/12021",
+  "title": "External Store and Forward backend over USB",
+  "category": "Ideas",
+  "state_at_verification": "open",
+  "comments_at_verification": 0,
+  "source_document": "upstream-discussion-draft.md",
+  "body_sha256_utf8_lf": "4573b9d853a75cbf0096978407185b22ffd7f4b232aebd24135ffc52b8472ef0",
+  "verification": "Published page title, category and full body checked in authenticated browser; submitted text matches local draft.",
+  "scope": "External USB Store and Forward backend only; no font, radio-power or local build changes.",
+  "pull_request_created": false,
+  "maintainer_approval": false,
+  "last_checked_at": "2026-09-30T08:39:11Z",
+  "preflight_document": "upstream-preflight.md",
+  "preflight_python_tests_passed": 95
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "tested_on": "2026-09-25",
+  "platform": "iOS",
+  "app_version": "2.7.22",
+  "app_build": "2395",
+  "transport": "Synthetic Meshtastic TCP; no radio",
+  "label": "SFTEST-07c7e79d",
+  "evidence": "User observations at every stage; screenshot after first LIVE replay. Screenshot is not published.",
+  "baseline_count": 1,
+  "live_counts": [
+    1,
+    2,
+    3
+  ],
+  "offline_counts": [
+    1,
+    2
+  ],
+  "channel": "SFTEST",
+  "sender": "Synthetic SF author",
+  "sender_and_channel": "PASS",
+  "unseen_history_reception": "PASS",
+  "live_replay_deduplication": "FAIL",
+  "repeated_history_deduplication": "FAIL",
+  "radio_multihop": "NOT RUN",
+  "firmware_changed": false,
+  "service_stopped": true,
+  "real_node_database_restoration": "Not yet confirmed by user",
+  "exact_ios_source_commit": "Unknown"
+}

@@ -1,0 +1,209 @@
+{
+  "checked_at": "2026-09-25T09:13:09.572320+00:00",
+  "method": "Source review; marker search is navigation only, not behavioral proof. No mobile binary run.",
+  "sources": [
+    {
+      "repository": "Meshtastic-Android",
+      "ref": "v2.8.1",
+      "commit": "7c6a6cc195a2248cd50ed7f2395451cabcd93fdc",
+      "commit_date": "2026-08-20T01:37:50Z",
+      "files": [
+        {
+          "path": "core/data/src/commonMain/kotlin/org/meshtastic/core/data/manager/StoreForwardPacketHandlerImpl.kt",
+          "url": "https://raw.githubusercontent.com/meshtastic/Meshtastic-Android/7c6a6cc195a2248cd50ed7f2395451cabcd93fdc/core/data/src/commonMain/kotlin/org/meshtastic/core/data/manager/StoreForwardPacketHandlerImpl.kt",
+          "sha256": "c55b718216dcc80dfa530f47230c6c2e923a8e6400bb45f166b726cc28314523",
+          "marker_lines": []
+        }
+      ]
+    },
+    {
+      "repository": "Meshtastic-Android",
+      "ref": "v2.8.2-open.4",
+      "commit": "7161b1bda118aa42c1034d190f0399b62b1441f7",
+      "commit_date": "2026-09-23T01:15:01Z",
+      "files": [
+        {
+          "path": "core/data/src/commonMain/kotlin/org/meshtastic/core/data/manager/StoreForwardPacketHandlerImpl.kt",
+          "url": "https://raw.githubusercontent.com/meshtastic/Meshtastic-Android/7161b1bda118aa42c1034d190f0399b62b1441f7/core/data/src/commonMain/kotlin/org/meshtastic/core/data/manager/StoreForwardPacketHandlerImpl.kt",
+          "sha256": "c18a8bf8366f0d341d5b90d6e5273f69bbf7dd866fd4d12f98e22c84765776fa",
+          "marker_lines": [
+            206,
+            214
+          ]
+        }
+      ]
+    },
+    {
+      "repository": "Meshtastic-Android",
+      "ref": "snapshot",
+      "commit": "ecf0b1283b8dd21200d3083c930537fd52c92709",
+      "commit_date": "2026-09-25T00:42:52Z",
+      "files": [
+        {
+          "path": "core/data/src/commonMain/kotlin/org/meshtastic/core/data/manager/StoreForwardPacketHandlerImpl.kt",
+          "url": "https://raw.githubusercontent.com/meshtastic/Meshtastic-Android/ecf0b1283b8dd21200d3083c930537fd52c92709/core/data/src/commonMain/kotlin/org/meshtastic/core/data/manager/StoreForwardPacketHandlerImpl.kt",
+          "sha256": "c18a8bf8366f0d341d5b90d6e5273f69bbf7dd866fd4d12f98e22c84765776fa",
+          "marker_lines": [
+            206,
+            214
+          ]
+        }
+      ]
+    },
+    {
+      "repository": "Meshtastic-Apple",
+      "ref": "v2.7.21",
+      "commit": "4ea817379c4d70075c3c5b8cc0cecee7938a23bd",
+      "commit_date": "2026-09-01T04:30:13Z",
+      "files": [
+        {
+          "path": "Meshtastic/Helpers/MeshPackets.swift",
+          "url": "https://raw.githubusercontent.com/meshtastic/Meshtastic-Apple/4ea817379c4d70075c3c5b8cc0cecee7938a23bd/Meshtastic/Helpers/MeshPackets.swift",
+          "sha256": "d73ba1e5901897f86885d30ea254e6a1f8a4608f17b815eba32b2d8020510b2d",
+          "marker_lines": [
+            1714,
+            1754,
+            1770
+          ]
+        },
+        {
+          "path": "Meshtastic/Accessory/Accessory Manager/AccessoryManager+FromRadio.swift",
+          "url": "https://raw.githubusercontent.com/meshtastic/Meshtastic-Apple/4ea817379c4d70075c3c5b8cc0cecee7938a23bd/Meshtastic/Accessory/Accessory%20Manager/AccessoryManager%2BFromRadio.swift",
+          "sha256": "89d295963c998fca8cd7d7484fb23aae0c1fe9701663e257eb152e5f11284095",
+          "marker_lines": [
+            551
+          ]
+        }
+      ]
+    },
+    {
+      "repository": "Meshtastic-Apple",
+      "ref": "v2.7.22",
+      "error": 422
+    },
+    {
+      "repository": "Meshtastic-Apple",
+      "ref": "main",
+      "commit": "6f3ee55bc7c9ff9b2d6f0c64b23de05ddeeaae21",
+      "commit_date": "2026-09-22T15:42:19Z",
+      "files": [
+        {
+          "path": "Meshtastic/Helpers/MeshPackets.swift",
+          "url": "https://raw.githubusercontent.com/meshtastic/Meshtastic-Apple/6f3ee55bc7c9ff9b2d6f0c64b23de05ddeeaae21/Meshtastic/Helpers/MeshPackets.swift",
+          "sha256": "4ee4e3bd1fed00b45f634a35809787de75f709ece0df4270634d9644cd1e1da1",
+          "marker_lines": [
+            1860,
+            1900,
+            1916
+          ]
+        },
+        {
+          "path": "Meshtastic/Accessory/Accessory Manager/AccessoryManager+FromRadio.swift",
+          "url": "https://raw.githubusercontent.com/meshtastic/Meshtastic-Apple/6f3ee55bc7c9ff9b2d6f0c64b23de05ddeeaae21/Meshtastic/Accessory/Accessory%20Manager/AccessoryManager%2BFromRadio.swift",
+          "sha256": "ec5657ee313751ac0af0862e7aa15817a62d7c0185e8564dd8dea4a8dac33ffa",
+          "marker_lines": [
+            632
+          ]
+        }
+      ]
+    }
+  ],
+  "app_store": [
+    {
+      "country": "us",
+      "url": "https://itunes.apple.com/lookup?id=1586432531&country=us",
+      "results": [
+        {
+          "version": "2.7.22",
+          "currentVersionReleaseDate": "2026-09-11T00:58:27Z",
+          "trackViewUrl": "https://apps.apple.com/us/app/meshtastic/id1586432531?uo=4"
+        }
+      ]
+    },
+    {
+      "country": "ua",
+      "url": "https://itunes.apple.com/lookup?id=1586432531&country=ua",
+      "results": [
+        {
+          "version": "2.7.22",
+          "currentVersionReleaseDate": "2026-09-11T00:58:27Z",
+          "trackViewUrl": "https://apps.apple.com/ua/app/meshtastic/id1586432531?uo=4"
+        }
+      ]
+    }
+  ],
+  "target": {
+    "platform": "iOS",
+    "version": "2.7.22",
+    "build": "2395",
+    "source": "User confirmed installed version",
+    "priority": "iOS first; Android deferred",
+    "distribution": "App Store only",
+    "custom_client_builds_allowed": false,
+    "testflight_allowed": false
+  },
+  "published_releases": {
+    "Meshtastic-Android": [
+      {
+        "tag_name": "snapshot",
+        "published_at": "2026-09-25T01:58:39Z",
+        "prerelease": true,
+        "html_url": "https://github.com/meshtastic/Meshtastic-Android/releases/tag/snapshot"
+      },
+      {
+        "tag_name": "v2.8.2-open.4",
+        "published_at": "2026-09-23T02:02:01Z",
+        "prerelease": true,
+        "html_url": "https://github.com/meshtastic/Meshtastic-Android/releases/tag/v2.8.2-open.4"
+      },
+      {
+        "tag_name": "v2.8.1",
+        "published_at": "2026-08-20T13:13:39Z",
+        "prerelease": false,
+        "html_url": "https://github.com/meshtastic/Meshtastic-Android/releases/tag/v2.8.1"
+      }
+    ],
+    "Meshtastic-Apple": [
+      {
+        "tag_name": "v2.7.21",
+        "published_at": "2026-09-01T17:12:39Z",
+        "prerelease": false,
+        "html_url": "https://github.com/meshtastic/Meshtastic-Apple/releases/tag/v2.7.21"
+      }
+    ]
+  },
+  "additional_sources": [
+    {
+      "repository": "Meshtastic-Apple",
+      "commit": "6f3ee55bc7c9ff9b2d6f0c64b23de05ddeeaae21",
+      "ref": "main",
+      "path": "Meshtastic.xcodeproj/project.pbxproj",
+      "url": "https://raw.githubusercontent.com/meshtastic/Meshtastic-Apple/6f3ee55bc7c9ff9b2d6f0c64b23de05ddeeaae21/Meshtastic.xcodeproj/project.pbxproj",
+      "sha256": "25a94e962449732a57f9998bbb26823823845f569b063821678bdf6d5dfb9430"
+    },
+    {
+      "repository": "Meshtastic-Android",
+      "commit": "7161b1bda118aa42c1034d190f0399b62b1441f7",
+      "ref": "v2.8.2-open.4",
+      "path": "core/data/src/commonMain/kotlin/org/meshtastic/core/data/manager/MeshDataHandlerImpl.kt",
+      "url": "https://raw.githubusercontent.com/meshtastic/Meshtastic-Android/7161b1bda118aa42c1034d190f0399b62b1441f7/core/data/src/commonMain/kotlin/org/meshtastic/core/data/manager/MeshDataHandlerImpl.kt",
+      "sha256": "c224d2ed90268cb2bed4e7f5da300a5a63d5731b246613ba151df5ea9cd97e0b"
+    },
+    {
+      "repository": "Meshtastic-Android",
+      "commit": "7161b1bda118aa42c1034d190f0399b62b1441f7",
+      "ref": "v2.8.2-open.4",
+      "path": "core/data/src/jvmTest/kotlin/org/meshtastic/core/data/manager/StoreForwardPacketHandlerImplTest.kt",
+      "url": "https://raw.githubusercontent.com/meshtastic/Meshtastic-Android/7161b1bda118aa42c1034d190f0399b62b1441f7/core/data/src/jvmTest/kotlin/org/meshtastic/core/data/manager/StoreForwardPacketHandlerImplTest.kt",
+      "sha256": "f590316792648346f436e942136645ba84f4a74f9162c2c0930c22114f218bf8"
+    }
+  ],
+  "verdicts": {
+    "android_2_8_1": "No original_id normalization in reviewed source",
+    "android_2_8_2_open_4": "Source candidate; original_id normalization and sender-aware deduplication found, hardware NOT RUN",
+    "ios_2_7_21": "No original_id normalization in reviewed source",
+    "ios_main": "No original_id normalization in reviewed source; marketing version 2.7.23",
+    "ios_2_7_22_2395": "FAIL in direct synthetic TCP test on user iPhone: LIVE 1->2->3, OFFLINE 1->2; sender/channel correct. Exact source commit unknown; radio NOT RUN."
+  },
+  "direct_client_test": "ios-client-probe-result.json"
+}

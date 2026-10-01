@@ -1,0 +1,52 @@
+[build-system]
+requires = ["hatchling>=1.27,<2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "meshtastic-sf-server"
+version = "0.1.0a8"
+description = "MeshMemo — Meshtastic history server with a USB Store and Forward bridge"
+readme = "README.md"
+license = "GPL-3.0-only"
+license-files = ["LICENSE", "THIRD_PARTY_NOTICES.md"]
+requires-python = ">=3.11"
+keywords = ["meshtastic", "lora", "mesh", "history", "store-and-forward"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Web Environment",
+  "Intended Audience :: System Administrators",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Operating System :: Microsoft :: Windows",
+  "Operating System :: POSIX :: Linux",
+]
+dependencies = ["cryptography>=50.0.2,<51", "meshtastic==2.7.11", "protobuf>=7.35.1,<8", "SQLAlchemy>=2.0.40,<2.1", "alembic>=1.16,<2", "fastapi>=0.115,<1", "uvicorn>=0.34,<1", "jinja2>=3.1.6,<4", "pydantic>=2.0,<3", "pyserial==3.5", "pypubsub>=4,<5"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "build>=1,<2", "grpcio-tools==1.84.0", "nanopb==0.4.9.1", "httpx>=0.28,<1"]
+
+[project.scripts]
+meshtastic-sf-server = "meshtastic_sf.cli:main"
+
+[project.urls]
+Repository = "https://github.com/dmitryplohotnyuk/meshmemo"
+Documentation = "https://github.com/dmitryplohotnyuk/meshmemo#readme"
+Issues = "https://github.com/dmitryplohotnyuk/meshmemo/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/meshtastic_sf"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+  "/src", "/tests", "/scripts", "/firmware", "/docs", "/deploy", "/requirements",
+  "/README.md", "/README.ru.md", "/CONTRIBUTING.md", "/SECURITY.md", "/CHANGELOG.md",
+  "/LICENSE", "/THIRD_PARTY_NOTICES.md", "/pyproject.toml",
+  "/.github", "/.gitignore", "/.gitattributes", "/.editorconfig",
+]
+exclude = ["**/__pycache__", "**/*.pyc", "**/*.docx", "**/config.toml", "**/meshmemo.toml"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

@@ -1,0 +1,77 @@
+diff --git a/platformio.ini b/platformio.ini
+index 4560bfa..72a601c 100644
+--- a/platformio.ini
++++ b/platformio.ini
+@@ -9,6 +9,7 @@ extra_configs =
+ 	variants/*/*/platformio.ini
+ 	variants/*/diy/*/platformio.ini
+ 	src/graphics/niche/InkHUD/PlatformioConfig.ini
++	windows-build.ini
+ 
+ description = Meshtastic
+ 
+diff --git a/src/graphics/Screen.h b/src/graphics/Screen.h
+index 401cba5..2aa49dd 100644
+--- a/src/graphics/Screen.h
++++ b/src/graphics/Screen.h
+@@ -471,7 +471,7 @@ class Screen : public concurrency::OSThread
+         }
+ 
+         // We want to strip out prefix chars for two-byte char formats
+-        if (ch == 0xC2 || ch == 0xC3 || ch == 0x82 || ch == 0xD0 || ch == 0xD1)
++        if (ch == 0xC2 || ch == 0xC3 || ch == 0x82 || ch == 0xD0 || ch == 0xD1 || ch == 0xD2)
+             return (uint8_t)0;
+ 
+ #endif
+diff --git a/src/mesh/RadioInterface.cpp b/src/mesh/RadioInterface.cpp
+index 2a5ae32..bdd9412 100644
+--- a/src/mesh/RadioInterface.cpp
++++ b/src/mesh/RadioInterface.cpp
+@@ -141,7 +141,8 @@ const RegionInfo regions[] = {
+         433,05-434,7 Mhz 10 mW
+         https://nkrzi.gov.ua/images/upload/256/5810/PDF_UUZ_19_01_2016.pdf
+     */
+-    RDEF(UA_433, 433.0f, 434.7f, 10, 0, 10, true, false, false),
++    // Custom licensed deployment: raise only the UA_433 transmit power ceiling.
++    RDEF(UA_433, 433.0f, 434.7f, 10, 0, 22, true, false, false),
+ 
+     /*
+         868,0-868,6 Mhz 25 mW
+diff --git a/variants/esp32s3/tbeam-s3-core/platformio.ini b/variants/esp32s3/tbeam-s3-core/platformio.ini
+index 512cf32..5d0dfd0 100644
+--- a/variants/esp32s3/tbeam-s3-core/platformio.ini
++++ b/variants/esp32s3/tbeam-s3-core/platformio.ini
+@@ -24,3 +24,4 @@ lib_deps =
+ build_flags = 
+   ${esp32s3_base.build_flags} 
+   -I variants/esp32s3/tbeam-s3-core
++  -D OLED_UA=1
+--- /dev/null
++++ b/windows-build.ini
+@@ -0,0 +1,15 @@
++[env:heltec-wireless-tracker]
++build_unflags =
++  ${esp32_common.build_unflags}
++  -flto
++extra_scripts =
++  ${esp32_common.extra_scripts}
++  extra_scripts/windows_lto.py
++
++[env:tbeam-s3-core]
++build_unflags =
++  ${esp32_common.build_unflags}
++  -flto
++extra_scripts =
++  ${esp32_common.extra_scripts}
++  extra_scripts/windows_lto.py
+--- /dev/null
++++ b/extra_scripts/windows_lto.py
+@@ -0,0 +1,8 @@
++import os
++
++Import("env")
++
++# GCC 8 LTO subprocesses exceed Windows CreateProcess command limits.
++if os.name == "nt":
++    env.ProcessUnFlags("-flto")
++    env.Append(LINKFLAGS=["-fno-lto"])

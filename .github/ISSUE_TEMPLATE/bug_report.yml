@@ -1,0 +1,29 @@
+name: Bug report
+description: Report a reproducible problem using sanitized or synthetic data.
+body:
+  - type: markdown
+    attributes:
+      value: |
+        For vulnerabilities use private reporting when configured; do not post exploit details here.
+        Never include channel keys/URLs, device backups, real chats or private identifiers.
+  - type: textarea
+    id: versions
+    attributes:
+      label: Versions and environment
+      description: Server version/commit, OS, Python, board/firmware/profile; exact phone/app build if relevant.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps and expected behavior
+      description: Use a small synthetic example.
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: Include sanitized error text and whether replay was enabled.
+    validations:
+      required: true

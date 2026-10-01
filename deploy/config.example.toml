@@ -1,0 +1,13 @@
+# Copy to meshmemo.toml (local) or /etc/meshmemo/config.toml (systemd).
+# Linux permissions: 0600, or root:meshmemo 0640 for the systemd service.
+[server]
+host = "127.0.0.1"
+port = 18765
+# Relative paths are resolved from this configuration file, not the working directory.
+database = "data/history.db"
+allowed_hosts = ["127.0.0.1", "localhost", "[::1]"]
+
+[admin]
+# Required: choose a unique password of at least 12 characters. Login is "admin".
+# Blank intentionally: the server must refuse startup until a password is configured.
+password = ""

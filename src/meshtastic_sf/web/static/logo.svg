@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+<title>MeshMemo — mesh network and message archive</title>
+<rect width="64" height="64" rx="16" fill="#24313C"/>
+<path d="M10 29 21 13M20 29 32 12 44 29" stroke="#F8F3EB" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M23 36v14c0 4 7 7 16 7s16-3 16-7V36" fill="#24313C" stroke="#F2AD87" stroke-width="3"/>
+<ellipse cx="39" cy="36" rx="16" ry="6" fill="#24313C" stroke="#F2AD87" stroke-width="3"/>
+<path d="M23 43c0 4 7 7 16 7s16-3 16-7" stroke="#F2AD87" stroke-width="3"/>
+</svg>
