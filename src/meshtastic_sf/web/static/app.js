@@ -120,10 +120,23 @@ function renderMessages(scrollBottom = false, older = false) {
     const avatar = node("span", m.sender_name.slice(0, 2).toUpperCase(), "avatar"); avatar.title = m.sender_id;
     meta.append(node("strong", m.sender_name), node("time", new Date(m.received_at * 1000).toLocaleTimeString(I18n.locale, {hour: "2-digit", minute: "2-digit"})));
     meta.title = t('Получено {date}',{date:date(m.received_at)});
-    content.append(meta, node("div", m.text, "bubble"));
+    const bubble = node("div", undefined, "bubble");
+    if (m.reply_id) {
+      const reply = m.reply, quote = node("blockquote", undefined, "reply-preview");
+      quote.setAttribute("aria-label", t('Ответ на сообщение'));
+      if (reply?.status === "found") {
+        const author = node("strong", reply.sender_name, "reply-author"); author.title = reply.sender_id;
+        quote.append(author, node("span", reply.text, "reply-text"));
+      } else {
+        quote.classList.add("reply-unavailable");
+        quote.append(node("span", t(reply?.status === "ambiguous" ? "Не удалось однозначно определить исходное сообщение" : "Исходное сообщение отсутствует в архиве")));
+      }
+      bubble.append(quote);
+    }
+    bubble.append(node("div", m.text, "message-text"));
+    content.append(meta, bubble);
     const tags = [];
     if (m.collision) tags.push(t("Вариант сообщения сохранён отдельно"));
-    if (m.reply_id) tags.push(t('Ответ на сообщение'));
     if (tags.length) content.append(node("small", tags.join(" · "), "message-note"));
     article.append(avatar, content); elements.push(article);
   }

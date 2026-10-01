@@ -2,6 +2,8 @@
 
 ## 0.1.0a8 — unreleased
 
+- Show the original author and text inside chat replies, including originals outside the loaded page or search; mark missing or ambiguous originals explicitly.
+
 - Add a Russian README alongside the English project overview and include both in source releases.
 - Publish the project under GPL-3.0-only with repository links and private vulnerability reporting.
 - Upgrade cryptography to 50.0.2 following dependency audit (CVE-2026-69247).

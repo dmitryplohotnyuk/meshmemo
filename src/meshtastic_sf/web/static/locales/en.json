@@ -230,5 +230,7 @@
   "Закрыть": "Close",
   "Оставьте пустым, чтобы сохранить текущий ключ.": "Leave empty to keep the current key.",
   "Закрыть без сохранения изменений?": "Close without saving changes?",
-  "Каналов пока нет. Добавьте первый канал.": "No channels yet. Add your first channel."
+  "Каналов пока нет. Добавьте первый канал.": "No channels yet. Add your first channel.",
+  "Исходное сообщение отсутствует в архиве": "Original message is not in the archive",
+  "Не удалось однозначно определить исходное сообщение": "Original message could not be identified unambiguously"
 }

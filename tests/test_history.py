@@ -46,6 +46,35 @@ def test_durable_deduplication_with_concurrent_writers(repo):
         reopened.close()
 
 
+def test_chat_quotes_are_scoped_and_ambiguous_ids_are_not_guessed(repo):
+    original = message(repo, packet_id=40, payload=b"original")
+    other_scope = repo.channel_scope(b"other-private-channel", b"lora")
+    repo.save(replace(original, scope=other_scope, payload=b"private other channel"))
+    reply = replace(original, sender=123, packet_id=41, reply_id=40,
+                    payload=b"reply", decoded_data=b"reply", received_at=original.received_at + 1)
+    repo.save(reply)
+    assert repo.chat(reply.scope)[0]["reply"] == {"status": "missing"}
+    target = repo.save(original)
+    repo.label_node(original.sender, "Original author")
+    quote = repo.chat(reply.scope, query="reply")[0]["reply"]
+    assert quote == {"status": "found", "row_id": target.row_id,
+                     "sender_id": "!fffffffe", "sender_name": "Original author", "text": "original"}
+    # Even another sender can reuse the ID: reply_id alone cannot identify which.
+    repo.save(replace(original, sender=456, payload=b"conflicting author"))
+    assert repo.chat(reply.scope, query="reply")[0]["reply"] == {"status": "ambiguous"}
+    repo.prune(before=reply.received_at)
+    assert repo.chat(reply.scope)[0]["reply"] == {"status": "missing"}
+
+
+def test_chat_quote_id_fallback_and_self_reference(repo):
+    original = message(repo, packet_id=10, reply_id=10)
+    repo.save(original)
+    assert repo.chat(original.scope)[0]["reply"] == {"status": "missing"}
+    repo.save(replace(original, packet_id=11, reply_id=10))
+    quote = repo.chat(original.scope)[1]["reply"]
+    assert quote["status"] == "found" and quote["sender_name"] == "!fffffffe"
+
+
 def test_scope_device_binding_and_id_collisions(repo):
     item = message(repo)
     first = repo.save(item)

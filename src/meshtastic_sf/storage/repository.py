@@ -192,12 +192,41 @@ class HistoryRepository:
             statement = statement.where(sa.func.instr(sa.cast(messages.c.payload, sa.Text), query) > 0)
         with self.engine.connect() as conn:
             rows = conn.execute(statement.order_by(messages.c.row_id.desc()).limit(limit)).mappings().all()
+            # Resolve the page's reply IDs in one bounded query, independent of
+            # pagination/search. A reply has no sender ID, so never guess when
+            # a packet ID is shared by multiple archived messages.
+            reply_ids = {row["reply_id"] for row in rows if row["reply_id"]}
+            replies = {}
+            if reply_ids:
+                targets = sa.select(messages.c.packet_id, sa.func.count().label("matches"),
+                                    sa.func.min(messages.c.row_id).label("target_id")).where(
+                    messages.c.scope == scope, messages.c.packet_id.in_(reply_ids)
+                ).group_by(messages.c.packet_id).subquery()
+                originals = conn.execute(sa.select(
+                    targets.c.packet_id, targets.c.matches, messages.c.row_id,
+                    messages.c.sender, messages.c.payload, nodes.c.name.label("sender_name")
+                ).select_from(targets.join(messages, messages.c.row_id == targets.c.target_id)
+                              .outerjoin(nodes, messages.c.sender == nodes.c.node_num))).mappings()
+                replies = {row["packet_id"]: dict(row) for row in originals}
         output = []
         for row in reversed(rows):
             item = dict(row)
             item["text"] = item.pop("payload").decode("utf-8", errors="replace")
             item["sender_id"] = f'!{item["sender"]:08x}'
             item["sender_name"] = item["sender_name"] or item["sender_id"]
+            item["reply"] = None
+            if item["reply_id"]:
+                original = replies.get(item["reply_id"])
+                if original is None or (original["matches"] == 1 and original["row_id"] == item["row_id"]):
+                    item["reply"] = {"status": "missing"}
+                elif original["matches"] != 1:
+                    item["reply"] = {"status": "ambiguous"}
+                else:
+                    sender_id = f'!{original["sender"]:08x}'
+                    item["reply"] = {"status": "found", "row_id": original["row_id"],
+                                     "sender_id": sender_id,
+                                     "sender_name": original["sender_name"] or sender_id,
+                                     "text": original["payload"].decode("utf-8", errors="replace")}
             output.append(item)
         return output
 

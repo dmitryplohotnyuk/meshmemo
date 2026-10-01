@@ -45,6 +45,7 @@ def test_admin_archive_search_pagination_and_backup(tmp_path):
             frame = scenario.packet("live")
             frame.packet.id = i + 1
             frame.packet.decoded.payload = ("Привіт Ґґ 100% <script>alert(1)</script>" if i == 0 else f"Message {i}").encode()
+            frame.packet.decoded.reply_id = 1 if i == 104 else 0
             app.state.runtime.ingest(ingestor, frame.SerializeToString(), now + i)
         app.state.runtime.ingest(ingestor, frame.SerializeToString(), now + 106)
         channels = client.get("/api/channels").json()
@@ -52,6 +53,11 @@ def test_admin_archive_search_pagination_and_backup(tmp_path):
         scope = channels[0]["scope"]
         recent = client.get("/api/messages", params={"scope": scope}).json()
         assert len(recent) == 100 and recent[0]["text"] == "Message 5"
+        assert recent[-1]["reply"]["status"] == "found"
+        assert recent[-1]["reply"]["text"] == "Привіт Ґґ 100% <script>alert(1)</script>"
+        assert recent[-1]["reply"]["sender_name"]
+        reply_search = client.get("/api/messages", params={"scope": scope, "q": "Message 104"}).json()
+        assert len(reply_search) == 1 and reply_search[0]["reply"] == recent[-1]["reply"]
         older = client.get("/api/messages", params={"scope": scope, "before": recent[0]["row_id"]}).json()
         assert len(older) == 5 and "Привіт Ґґ" in older[0]["text"]
         search = client.get("/api/messages", params={"scope": scope, "q": "%"}).json()
