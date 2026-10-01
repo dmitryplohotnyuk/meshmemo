@@ -17,7 +17,7 @@ deduplication, server-authored replay and multi-hop acceptance are incomplete.
 See [current status](docs/implementation-status.md) for the tested boundaries.
 
 Server 0.1.0a8 supports the portable USF2 1/4 firmware contract from MeshMemo
-Firmware Builder 0.1.0a2, alongside legacy USF1 1/2–1/3. T-Beam S3 Core and
+[Firmware Builder](https://github.com/dmitryplohotnyuk/meshmemo-firmware-builder) 0.1.0a2, alongside legacy USF1 1/2–1/3. T-Beam S3 Core and
 Heltec V3 have separate builder profiles; new-build hardware acceptance is
 pending. See [firmware compatibility](docs/firmware-compatibility.md).
 
