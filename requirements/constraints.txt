@@ -26,7 +26,7 @@ Pypubsub==4.0.7
 pyserial==3.5
 PyYAML==6.0.3
 requests==2.34.2
-SQLAlchemy==2.0.54
+SQLAlchemy==2.1.3
 starlette==1.7.0
 tabulate==0.9.0
 typing-inspection==0.4.4
